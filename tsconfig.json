@@ -21,7 +21,8 @@
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    "skipLibCheck": true, //agregado para ver si funciona fireModule
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
