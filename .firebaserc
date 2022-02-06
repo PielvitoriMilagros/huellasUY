@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "huellas-uy"
+  },
+  "targets": {
+    "huellas-uy": {
+      "hosting": {
+        "huellasUY": [
+          "huellas-uy"
+        ]
+      }
+    }
+  }
+}
