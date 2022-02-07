@@ -24,12 +24,14 @@ import { AlbumComponent } from './components/album/album.component';
 import { MascotasEncontradasComponent } from './pages/mascotas-encontradas/mascotas-encontradas.component';
 import { MascotasPerdidasComponent } from './pages/mascotas-perdidas/mascotas-perdidas.component';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 import { AngularFireModule} from '@angular/fire/compat';
 // import {AngularFirestore} from '@angular/fire/compat/firestore';
 import {AngularFireAuthModule} from '@angular/fire/compat/auth';
+import { CargarMascotasComponent } from './pages/cargar-mascotas/cargar-mascotas.component';
+import { FormularioCargaComponent } from './components/formulario-carga/formulario-carga.component';
 
 @NgModule({
   declarations: [
@@ -43,13 +45,16 @@ import {AngularFireAuthModule} from '@angular/fire/compat/auth';
     ErrorComponent,
     AlbumComponent,
     MascotasEncontradasComponent,
-    MascotasPerdidasComponent
+    MascotasPerdidasComponent,
+    CargarMascotasComponent,
+    FormularioCargaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     CommonModule,
     // AngularFirestore,
     AngularFireModule.initializeApp(environment.firebaseConfig),

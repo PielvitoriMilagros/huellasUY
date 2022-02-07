@@ -1,5 +1,6 @@
-<app-navbar></app-navbar>
-<section class="text-center container">
+<body>
+  <app-navbar></app-navbar>
+  <section class="text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
         <h1>Mascotas Perdidas</h1>
@@ -7,6 +8,7 @@
       </div>
     </div>
   </section>
-<app-album></app-album>
+<app-album [listaAnimales]="this.animalesPerdidos"></app-album>
 
 <app-footer></app-footer>
+</body>

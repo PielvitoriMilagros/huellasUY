@@ -1,0 +1,65 @@
+<body>
+    
+    <div class="container">
+        <form [formGroup]="forma" (ngSubmit)="aceptar()">
+
+            <div class="row">
+                <div class="col-md-12 mb-5">
+                    <h1>Cargá tu mascota</h1>
+                </div>
+            </div>
+            <div class="row formulario">
+
+                <div class="col-md-6 mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" formControlName="nombre">
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label for="especie" class="form-label">Especie</label>
+                    <input type="text" class="form-control" id="especie"
+                        formControlName="especie">
+                    <small class="invalid"
+                        *ngIf="forma.get('especie')?.errors?.['required'] && forma.get('especie')?.touched">La especie
+                        del animal es requerida</small>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label for="color" class="form-label">Color de pelaje</label>
+                    <input type="text" class="form-control" id="color" formControlName="color">
+                    <small class="invalid"
+                        *ngIf="forma.get('color')?.errors?.['required'] && forma.get('color')?.touched">El color de pelo
+                        es requerido</small>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label for="identif" class="form-label">¿Tenía identificación?</label>
+                    <select class="form-select" id="identif" formControlName="identif">
+                        <option value="">Seleccione uno</option>
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                    <small class="invalid" *ngIf="forma.get('identif')?.errors?.['required'] && forma.get('identif')?.touched">Esta información es requerida</small>
+                </div>
+
+                <div class="col-md-12 mb-5">
+                    <label for="comentario" class="form-label">Más sobre el animal</label>
+                    <input type="text" class="form-control" id="comentario" formControlName="comentario">
+                    <small class="invalid"
+                        *ngIf="forma.get('comentario')?.errors?.['required'] && forma.get('comentario')?.touched">Es
+                        necesaria más información del animal</small>
+                </div>
+
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-12 d-grid gap-2">
+                    <button class="btn btn-primary btn-block" [disabled]="forma.invalid">
+                        Cargar mascota
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>

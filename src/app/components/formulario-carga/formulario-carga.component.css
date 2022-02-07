@@ -1,0 +1,26 @@
+.container {
+    max-width: 80%;
+    padding: 3rem;
+    background-color: rgba(26, 255, 0, 0.116);
+
+
+    /* SHADOW */
+    -webkit-box-shadow: 1px 1px 31px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 31px -5px rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 31px -5px rgba(0,0,0,0.75);
+}
+
+body{
+    background-color: transparent;
+    margin-top: 1rem;
+}
+
+h1{
+    color: rgb(41, 40, 40);
+    text-align: center;
+}
+
+.invalid {
+    color: red;
+}
+
