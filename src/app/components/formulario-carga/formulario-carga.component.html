@@ -9,6 +9,16 @@
                 </div>
             </div>
             <div class="row formulario">
+                <div class="col-lg-12 mb-5">
+                <div class="btn-group" style="width: 100%;" role="group">
+                    <input (click)="eleccioncondicion('perdida')" type="radio" class="btn-check" name="btnradio" value="perdida" id="perdida" autocomplete="off" checked>
+                    <label class="btn btn-outline-primary" for="perdida">Perdida</label>
+                  
+                    <input (click)="eleccioncondicion('encontrada')" type="radio" class="btn-check" name="btnradio" value="encontrada" id="encontrada" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="encontrada">Encontrada</label>                  
+                    
+                  </div>
+                  </div>
 
                 <div class="col-md-6 mb-3">
                     <label for="nombre" class="form-label">Nombre</label>

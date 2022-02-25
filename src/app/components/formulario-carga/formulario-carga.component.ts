@@ -9,6 +9,8 @@ import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/fo
 export class FormularioCargaComponent implements OnInit {
 
   public forma!: FormGroup;
+  
+  public condicion:string = 'perdida';
 
   constructor(private fb: FormBuilder) { }
 
@@ -25,6 +27,10 @@ export class FormularioCargaComponent implements OnInit {
 
   public aceptar(): void {
     console.log(this.forma.getRawValue());//devuelve json
+  }
+
+  eleccioncondicion(cond:any): void{
+    this.condicion = cond;
   }
 
 
